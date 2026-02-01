@@ -1,14 +1,18 @@
-import { Geist, Geist_Mono } from "next/font/google";
+
 import "./globals.css";
+import Header from '@/components/header'
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import localFont from 'next/font/local';
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const monaSans = localFont({
+  src: [
+    { path: '../public/fonts/MonaSans-Regular.woff2', weight: '400' },
+    { path: '../public/fonts/MonaSans-Medium.woff2', weight: '500' },
+    { path: '../public/fonts/MonaSans-SemiBold.woff2', weight: '600' },
+    { path: '../public/fonts/MonaSans-Bold.woff2', weight: '700' },
+  ],
+  variable: '--font-mona',
+    display: "swap",
 });
 
 export const metadata = {
@@ -18,8 +22,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+  <html lang="en" className={monaSans.variable}>
+      <body>
+      <Header />
         {children}
       </body>
     </html>
