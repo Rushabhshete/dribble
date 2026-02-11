@@ -1,7 +1,12 @@
+import Header from "./header";
 import HeroTabs from "./hero-tabs";
+
 
 export default function Hero() {
   return (
+    <>
+    <Header />
+
     <section className="flex px-20 ">
       {/* LEFT CONTENT */}
       <div className="justify-start">
@@ -32,5 +37,9 @@ export default function Hero() {
         </div>
       </div>
     </section>
+
+  
+    </>
+
   );
 }

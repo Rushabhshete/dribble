@@ -1,6 +1,6 @@
 
 import "./globals.css";
-import Header from '@/components/header'
+
 
 import localFont from 'next/font/local';
 
@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
   return (
   <html lang="en" className={monaSans.variable}>
       <body>
-      <Header />
+
         {children}
       </body>
     </html>

@@ -30,7 +30,7 @@ export default function Header() {
         <Link href='/signups/new' className="font-bold text-[14px] hover:text-gray-600">
           Sign up
         </Link>
-        <Link href='/signups/new' className="button bg-black text-white px-5 py-3 rounded-4xl font-bold hover:bg-gray-600">
+        <Link href='/session/new' className="button bg-black text-white px-5 py-3 rounded-4xl font-bold hover:bg-gray-600">
           Log in
         </Link>
       </div>
